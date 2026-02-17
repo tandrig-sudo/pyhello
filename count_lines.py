@@ -4,8 +4,13 @@ import sys
 def count_lines(filename):
     try:
         with open(filename, 'r') as file:
-            line_count = sum(1 for line in file)
+            line_count = 0
+            word_count = 0
+            for line in file:
+                line_count += 1
+                word_count += len(line.split())
         print(f"Number of lines in '{filename}': {line_count}")
+        print(f"Number of words in '{filename}': {word_count}")
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
         sys.exit(1)
