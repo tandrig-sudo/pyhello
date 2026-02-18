@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import sys
-
+#PR rule test
 def count_lines(filename):
     try:
         with open(filename, 'r') as file:
